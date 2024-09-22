@@ -1,0 +1,6 @@
+[general]
+sensitivity = 50
+bar_width = 0.5
+
+[color]
+foreground = '#61afef'
