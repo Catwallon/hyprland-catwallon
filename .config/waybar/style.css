@@ -1,0 +1,63 @@
+* {
+	font-family: JetbrainsMono Nerd Font;
+	font-size: 12pt;
+	color: #abb2bf;
+}
+
+window#waybar {
+    background: rgba(26, 27, 38, 0.9);
+}
+
+.modules-right {
+    margin: 2px 10px 0 0;
+}
+.modules-center {
+    margin: 2px 0 0 0;
+}
+.modules-left {
+    margin: 2px 0 0 10px;
+}
+
+#workspaces button {
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    margin: 5px 3px;
+    padding: 0 3px 0 5px;
+}
+
+#workspaces button.active {
+    background: #7aa2f7;
+}
+
+#workspaces button.active label {
+    color: #1a1b26;
+}
+
+#workspaces button:hover {
+    background: transparent;
+}
+
+#workspaces button:hover label {
+    color: #7aa2f7;
+}
+
+#workspaces,
+#clock,
+#battery,
+#temperature,
+#cpu,
+#memory,
+#wireplumber,
+#network,
+#power {
+  padding: 0 10px;
+}
+
+#custom-power {
+    background: #7aa2f7;
+    color: #1a1b26;
+    border-radius: 50%;
+    margin: 5px 5px;
+    padding: 0px 0px 0px 6px;
+}

@@ -1,0 +1,83 @@
+{
+  "modules-left": [
+    "hyprland/workspaces",
+    "clock#time",
+    "clock#date",
+    "battery"
+  ],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "temperature",
+    "cpu",
+    "memory",
+    "wireplumber",
+    "network",
+    "custom/power"
+  ],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true
+  },
+  "clock#time": {
+    "format": "<span color=\"#7aa2f7\"> </span>{:%H:%M}",
+    "interval": 1
+  },
+  "clock#date": {
+    "format": "<span color=\"#7aa2f7\"> </span>{:%d/%m}",
+    "interval": 1
+  },
+  "battery": {
+    "bat": "BAT0",
+    "format": "{icon}{capacity}%",
+    "format-icons": [
+      "<span color=\"#f7768e\"> </span>",
+      "<span color=\"#f7768e\"> </span>",
+      "<span color=\"#7aa2f7\"> </span>",
+      "<span color=\"#7aa2f7\"> </span>",
+      "<span color=\"#7aa2f7\"> </span>"
+    ],
+    "format-charging": "<span color=\"#e5c07b\">󱐌 </span>{capacity}%",
+    "interval": 1
+  },
+  "hyprland/window": {
+    "max-length": 48
+  },
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon6/temp1_input",
+    "critical-threshold": 80,
+    "format": "<span color=\"#7aa2f7\"> </span>{temperatureC}°C",
+    "format-critical": "<span color=\"#f7768e\"> </span>{temperatureC}°C",
+    "interval": 4
+  },
+  "cpu": {
+    "format": "<span color=\"#7aa2f7\"> </span>{usage}%",
+    "interval": 4
+  },
+  "memory": {
+    "format": "<span color=\"#7aa2f7\"> </span>{used}GB",
+    "interval": 4
+  },
+  "wireplumber": {
+    "scroll-step": 5,
+    "format": "<span color=\"#7aa2f7\">{icon} </span>{volume}%",
+    "format-muted": "<span color=\"#f7768e\"> </span>",
+    "format-icons": ["", "", " "],
+    "interval": 1
+  },
+  "network": {
+    "format-wifi": "<span color=\"#7aa2f7\">  </span>{signalStrength}%",
+    "format-ethernet": "<span color=\"#7aa2f7\"> </span>",
+    "format-disconnected": "<span color=\"#f7768e\">󰤮  </span>"
+  },
+  "custom/power": {
+    "format": "<span color=\"#1a1b26\">⏻ </span>",
+    "menu": "on-click",
+    "menu-file": "/home/catwallon/.config/waybar/power_menu.xml",
+    "menu-actions": {
+      "lock": "swaylock",
+      "shutdown": "shutdown 0",
+      "reboot": "reboot",
+      "suspend": "systemctl suspend"
+    }
+  }
+}
