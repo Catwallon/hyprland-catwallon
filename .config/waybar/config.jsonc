@@ -3,7 +3,8 @@
     "hyprland/workspaces",
     "clock#time",
     "clock#date",
-    "battery"
+    "battery",
+    "tray"
   ],
   "modules-center": ["hyprland/window"],
   "modules-right": [
@@ -11,6 +12,7 @@
     "cpu",
     "memory",
     "wireplumber",
+    "bluetooth",
     "network",
     "custom/power"
   ],
@@ -39,6 +41,10 @@
     "format-charging": "<span color=\"#e5c07b\">󱐌 </span>{capacity}%",
     "interval": 1
   },
+  "tray": {
+    "format": "",
+    "max-length": 30
+  },
   "hyprland/window": {
     "max-length": 48
   },
@@ -64,10 +70,21 @@
     "format-icons": ["", "", " "],
     "interval": 1
   },
+  "bluetooth": {
+    "adapters": ["hci0"],
+    "format": "<span color=\"#7aa2f7\"></span>",
+    "format-off": "<span color=\"#f7768e\">󰂲</span>",
+    "format-disabled": "<span color=\"#f7768e\">󰂲</span>",
+    "format-connected": "<span color=\"#7aa2f7\">󰂱</span>",
+    "on-click": "blueman-manager",
+    "interval": 1
+  },
   "network": {
     "format-wifi": "<span color=\"#7aa2f7\">  </span>{signalStrength}%",
     "format-ethernet": "<span color=\"#7aa2f7\"> </span>",
-    "format-disconnected": "<span color=\"#f7768e\">󰤮  </span>"
+    "format-disconnected": "<span color=\"#f7768e\">󰤮  </span>",
+    "on-click": "nmcli device wifi rescan && kitty -e zsh -c nmtui",
+    "interval": 1
   },
   "custom/power": {
     "format": "<span color=\"#1a1b26\">⏻ </span>",
