@@ -32,11 +32,11 @@
     "bat": "BAT0",
     "format": "{icon}{capacity}%",
     "format-icons": [
-      "<span color=\"#f7768e\"> </span>",
-      "<span color=\"#f7768e\"> </span>",
-      "<span color=\"#7aa2f7\"> </span>",
-      "<span color=\"#7aa2f7\"> </span>",
-      "<span color=\"#7aa2f7\"> </span>"
+      "<span color=\"#f7768e\">  </span>",
+      "<span color=\"#f7768e\">  </span>",
+      "<span color=\"#7aa2f7\">  </span>",
+      "<span color=\"#7aa2f7\">  </span>",
+      "<span color=\"#7aa2f7\">  </span>"
     ],
     "format-charging": "<span color=\"#e5c07b\">󱐌 </span>{capacity}%",
     "interval": 1
@@ -60,14 +60,14 @@
     "interval": 4
   },
   "memory": {
-    "format": "<span color=\"#7aa2f7\"> </span>{used}GB",
+    "format": "<span color=\"#7aa2f7\">󰊚 </span>{used}GB",
     "interval": 4
   },
   "wireplumber": {
     "scroll-step": 5,
-    "format": "<span color=\"#7aa2f7\">{icon} </span>{volume}%",
+    "format": "<span color=\"#7aa2f7\">{icon}</span>{volume}%",
     "format-muted": "<span color=\"#f7768e\"> </span>",
-    "format-icons": ["", "", " "],
+    "format-icons": [" ", " ", " "],
     "interval": 1
   },
   "bluetooth": {
@@ -80,9 +80,9 @@
     "interval": 1
   },
   "network": {
-    "format-wifi": "<span color=\"#7aa2f7\">  </span>{signalStrength}%",
+    "format-wifi": "<span color=\"#7aa2f7\"> </span>{signalStrength}% ",
     "format-ethernet": "<span color=\"#7aa2f7\"> </span>",
-    "format-disconnected": "<span color=\"#f7768e\">󰤮  </span>",
+    "format-disconnected": "<span color=\"#f7768e\">󰤮   </span>",
     "on-click": "nmcli device wifi rescan && kitty -e zsh -c nmtui",
     "interval": 1
   },
