@@ -1,4 +1,4 @@
-image=$HOME/.wallpapers/stargazing-lofi.jpg
+image=$HOME/.wallpapers/wallpaper.jpg
 effect-blur=7x5
 
 indicator-idle-visible
@@ -8,7 +8,7 @@ clock
 timestr=%H:%M
 datestr=%x
 
-font=JetBrainsMono Nerd Font
+font=SFMono Nerd Font
 font-size=45
 text-color=abb2bf
 text-ver-color=abb2bf
