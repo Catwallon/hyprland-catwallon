@@ -80,14 +80,14 @@
     "interval": 1
   },
   "network": {
-    "format-wifi": "<span color=\"#7aa2f7\"> </span>{signalStrength}% ",
+    "format-wifi": "<span color=\"#7aa2f7\"> </span>{signalStrength}%",
     "format-ethernet": "<span color=\"#7aa2f7\"> </span>",
-    "format-disconnected": "<span color=\"#f7768e\">󰤮   </span>",
+    "format-disconnected": "<span color=\"#f7768e\">󰤮  </span>",
     "on-click": "nmcli device wifi rescan && kitty -e zsh -c nmtui",
     "interval": 1
   },
   "custom/power": {
-    "format": "<span color=\"#1a1b26\">⏻ </span>",
+    "format": "<span color=\"#abb2bf\">⏻ </span>",
     "menu": "on-click",
     "menu-file": "/home/catwallon/.config/waybar/power_menu.xml",
     "menu-actions": {
