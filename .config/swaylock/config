@@ -1,4 +1,4 @@
-image=$HOME/.wallpapers/wallpaper.jpg
+image=$HOME/.wallpapers/wallpaper
 effect-blur=7x5
 
 indicator-idle-visible
