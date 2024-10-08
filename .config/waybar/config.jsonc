@@ -92,9 +92,10 @@
     "menu-file": "/home/catwallon/.config/waybar/power_menu.xml",
     "menu-actions": {
       "lock": "swaylock",
+      "suspend": "systemctl suspend",
+      "logout": "loginctl terminate-user $USER",
       "shutdown": "shutdown 0",
-      "reboot": "reboot",
-      "suspend": "systemctl suspend"
+      "reboot": "reboot"
     }
   }
 }
