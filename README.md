@@ -11,7 +11,7 @@
 
 Install packages with pacman
 ```bash
-sudo pacman -S adwaita-icon-theme blueman git hyprland hyprpaper kitty neofetch noto-fonts-emoji swayidle thunar waybar wofi zsh
+sudo pacman -S adwaita-icon-theme blueman git hyprland hyprpaper kitty neofetch noto-fonts-emoji qt5ct qt6ct swayidle thunar waybar wofi zsh
 ```
 Install remaining packages with yay
 ```bash
