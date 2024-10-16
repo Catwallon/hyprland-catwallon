@@ -36,7 +36,7 @@
     },
     "format": "<span color=\"#7aa2f7\">{icon} </span>{capacity}%",
     "format-warning": "<span color=\"#e06c75\">{icon} </span>{capacity}%",
-    "format-charging": "<span color=\"#e06c75\">󱐌 </span>{capacity}%",
+    "format-charging": "<span color=\"#e5c07b\">󱐌 </span>{capacity}%",
     "format-icons": [" ", " ", " ", " ", " "],
     "interval": 1
   },
