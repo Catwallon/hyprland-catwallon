@@ -5,4 +5,5 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+alias o="xdg-open"
 alias code="code --ozone-platform=wayland"
