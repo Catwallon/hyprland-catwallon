@@ -1,0 +1,21 @@
+[global]
+    origin = top-right
+    width = 250
+    height = 100
+    offset = 40x40
+    font = SFMono Nerd Font
+    format = "<b>%s</b>\n%b\n"
+	enable_recursive_icon_lookup = true
+	icon_theme = "breeze-dark"
+    vertical_alignment = center
+    frame_width = 2
+    corner_radius = 12
+    mouse_left_click = close_current
+    background = "#1a1b26cc"
+    foreground = "#abb2bf"
+    frame_color = "#61afef"
+    timeout = 5
+
+[urgency_critical]
+    frame_color = "#e06c75"
+    timeout = 0
