@@ -30,15 +30,14 @@
   },
   "battery": {
     "bat": "BAT0",
-    "format": "{icon}{capacity}%",
-    "format-icons": [
-      "<span color=\"#f7768e\">  </span>",
-      "<span color=\"#f7768e\">  </span>",
-      "<span color=\"#7aa2f7\">  </span>",
-      "<span color=\"#7aa2f7\">  </span>",
-      "<span color=\"#7aa2f7\">  </span>"
-    ],
-    "format-charging": "<span color=\"#e5c07b\">󱐌 </span>{capacity}%",
+    "states": {
+      "warning": 20,
+      "critical": 5
+    },
+    "format": "<span color=\"#7aa2f7\">{icon} </span>{capacity}%",
+    "format-warning": "<span color=\"#e06c75\">{icon} </span>{capacity}%",
+    "format-charging": "<span color=\"#e06c75\">󱐌 </span>{capacity}%",
+    "format-icons": [" ", " ", " ", " ", " "],
     "interval": 1
   },
   "tray": {
@@ -52,7 +51,7 @@
     "hwmon-path": "/sys/class/hwmon/hwmon6/temp1_input",
     "critical-threshold": 80,
     "format": "<span color=\"#7aa2f7\"> </span>{temperatureC}°C",
-    "format-critical": "<span color=\"#f7768e\"> </span>{temperatureC}°C",
+    "format-critical": "<span color=\"#e06c75\"> </span>{temperatureC}°C",
     "interval": 4
   },
   "cpu": {
