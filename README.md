@@ -23,7 +23,7 @@ git clone https://github.com/Catwallon/hyprland-catwallon.git
 ```
 Copy all the config files in your home directory
 ```bash
-cp -r hyprland-catwallon/* $HOME
+cp -r hyprland-catwallon/.* $HOME
 ```
 Reboot your computer
 ```bash
