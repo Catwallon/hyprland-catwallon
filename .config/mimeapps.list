@@ -1,0 +1,9 @@
+[Default Applications]
+text/*=vim.desktop
+inode/directory=thunar.desktop
+image/*=imv.desktop
+video/*=mpv.desktop
+audio/*=mpv.desktop
+application/pdf=firefox.desktop
+text/html=firefox.desktop
+application/xhtml+xml=firefox.desktop
