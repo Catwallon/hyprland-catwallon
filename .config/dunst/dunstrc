@@ -1,6 +1,6 @@
 [global]
     origin = top-right
-    width = 250
+    width = (75, 250)
     height = 100
     offset = 40x40
     font = SFMono Nerd Font
