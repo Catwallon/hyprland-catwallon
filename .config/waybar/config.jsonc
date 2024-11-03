@@ -17,9 +17,6 @@
     "custom/power"
   ],
 
-  "hyprland/workspaces": {
-    "disable-scroll": true
-  },
   "clock#time": {
     "format": "<span color=\"#7aa2f7\"> </span>{:%H:%M}",
     "interval": 1
@@ -42,7 +39,7 @@
     "interval": 1
   },
   "tray": {
-    "format": "",
+    "spacing": 10,
     "max-length": 30
   },
   "hyprland/window": {

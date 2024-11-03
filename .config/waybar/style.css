@@ -34,8 +34,8 @@ window#waybar {
     color: #1a1b26;
 }
 
-#workspaces button:hover {
-    background: transparent;
+#workspaces button.active:hover label {
+    color: #1a1b26;
 }
 
 #workspaces button:hover label {
