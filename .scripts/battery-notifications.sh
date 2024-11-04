@@ -11,33 +11,35 @@ low_notified=false
 critical_notified=false
 charging_notified=false
 
-while true; do
-    BATTERY_LEVEL=$(acpi -b | grep -P -o '[0-9]+(?=%)')
-    CHARGING=$(acpi -b | grep -q "Charging" && echo true || echo false)
+if [ -d "/sys/class/power_supply/BAT0" ]; then
+		while true; do
+			BATTERY_LEVEL=$(acpi -b | grep -P -o '[0-9]+(?=%)')
+			CHARGING=$(acpi -b | grep -q "Charging" && echo true || echo false)
 
-    if [ "$CHARGING" = true ]; then
-        if [ "$charging_notified" = false ]; then
-            dunstify -u normal -i "$CHARGING_ICON" "Charging" "Power adapter plugged"
-            low_notified=false
-            critical_notified=false
-            charging_notified=true
-        fi
-    else
-        charging_notified=false
+			if [ "$CHARGING" = true ]; then
+				if [ "$charging_notified" = false ]; then
+					dunstify -u normal -i "$CHARGING_ICON" "Charging" "Power adapter plugged"
+					low_notified=false
+					critical_notified=false
+					charging_notified=true
+				fi
+			else
+				charging_notified=false
 
-        if [ "$BATTERY_LEVEL" -le "$CRITICAL_BATTERY_LEVEL" ] && [ "$critical_notified" = false ]; then
-            dunstify -u critical -i "$CRITICAL_BATTERY_ICON" "Critical battery" "Battery at $BATTERY_LEVEL%"
-            critical_notified=true
-        elif [ "$BATTERY_LEVEL" -le "$LOW_BATTERY_LEVEL" ] && [ "$critical_notified" = false ] && [ "$low_notified" = false ]; then
-            dunstify -u normal -i "$LOW_BATTERY_ICON" "Low battery" "Battery at $BATTERY_LEVEL%"
-            low_notified=true
-        fi
+				if [ "$BATTERY_LEVEL" -le "$CRITICAL_BATTERY_LEVEL" ] && [ "$critical_notified" = false ]; then
+					dunstify -u critical -i "$CRITICAL_BATTERY_ICON" "Critical battery" "Battery at $BATTERY_LEVEL%"
+					critical_notified=true
+				elif [ "$BATTERY_LEVEL" -le "$LOW_BATTERY_LEVEL" ] && [ "$critical_notified" = false ] && [ "$low_notified" = false ]; then
+					dunstify -u normal -i "$LOW_BATTERY_ICON" "Low battery" "Battery at $BATTERY_LEVEL%"
+					low_notified=true
+				fi
 
-        if [ "$BATTERY_LEVEL" -gt "$LOW_BATTERY_LEVEL" ]; then
-            low_notified=false
-            critical_notified=false
-        fi
-    fi
+				if [ "$BATTERY_LEVEL" -gt "$LOW_BATTERY_LEVEL" ]; then
+					low_notified=false
+					critical_notified=false
+				fi
+			fi
 
-    sleep 1
-done
+			sleep 1
+		done
+fi
