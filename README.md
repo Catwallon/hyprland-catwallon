@@ -21,6 +21,12 @@ Clone the repository
 ```bash
 git clone https://github.com/Catwallon/hyprland-catwallon.git
 ```
+Install the plugins
+```bash
+hyprpm update --no-shallow
+hyprpm add https://github.com/alexhulbert/Hyprchroma
+hyprpm enable hyprchroma
+```
 Copy all the config files in your home directory
 ```bash
 cp -r hyprland-catwallon/.* $HOME
