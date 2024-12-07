@@ -18,7 +18,7 @@ if [ -d "/sys/class/power_supply/BAT0" ]; then
 
 			if [ "$CHARGING" = true ]; then
 				if [ "$charging_notified" = false ]; then
-					dunstify -u normal -i "$CHARGING_ICON" "Charging" "Power adapter plugged"
+					dunstify -r 999 -u normal -i "$CHARGING_ICON" "Charging" "Power adapter plugged"
 					low_notified=false
 					critical_notified=false
 					charging_notified=true
@@ -27,10 +27,10 @@ if [ -d "/sys/class/power_supply/BAT0" ]; then
 				charging_notified=false
 
 				if [ "$BATTERY_LEVEL" -le "$CRITICAL_BATTERY_LEVEL" ] && [ "$critical_notified" = false ]; then
-					dunstify -u critical -i "$CRITICAL_BATTERY_ICON" "Critical battery" "Battery at $BATTERY_LEVEL%"
+					dunstify -r 999 -u critical -i "$CRITICAL_BATTERY_ICON" "Critical battery" "Battery at $BATTERY_LEVEL%"
 					critical_notified=true
 				elif [ "$BATTERY_LEVEL" -le "$LOW_BATTERY_LEVEL" ] && [ "$critical_notified" = false ] && [ "$low_notified" = false ]; then
-					dunstify -u normal -i "$LOW_BATTERY_ICON" "Low battery" "Battery at $BATTERY_LEVEL%"
+					dunstify -r 999 -u normal -i "$LOW_BATTERY_ICON" "Low battery" "Battery at $BATTERY_LEVEL%"
 					low_notified=true
 				fi
 
