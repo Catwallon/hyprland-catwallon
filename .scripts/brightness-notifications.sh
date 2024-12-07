@@ -12,5 +12,5 @@ else
 fi
 
 if [ -d "/sys/class/backlight" ]; then
-	dunstify -r 999 -i "$icon" -t 1000 "$brightness%"
+	dunstify -r 998 -i "$icon" -t 1000 "$brightness%"
 fi
