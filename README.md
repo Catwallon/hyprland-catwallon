@@ -12,21 +12,25 @@
 
 Install packages with pacman
 ```bash
-sudo pacman -S adwaita-icon-theme blueman breeze git hyprland hyprpaper imv kitty mpv neofetch noto-fonts-emoji qt5ct qt6ct swayidle thunar waybar wofi zsh
+sudo pacman -Syu acpi adwaita-icon-theme blueman breeze brightnessctl cmake cpio curl git hyprland hyprpaper imv kitty mpv neofetch noto-fonts-emoji qt5ct qt6ct swayidle thunar waybar wofi zsh
 ```
 Install remaining packages with yay
 ```bash
-yay -S cava hyprshot oh-my-zsh peaclock swaylock-effects
+yay -Syu cava hyprshot peaclock swaylock-effects
+```
+Install oh-my-zsh
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+Install the plugins
+```bash
+hyprpm update
+hyprpm add https://github.com/alexhulbert/Hyprchroma
+hyprpm enable hyprchroma
 ```
 Clone the repository
 ```bash
 git clone https://github.com/Catwallon/hyprland-catwallon.git
-```
-Install the plugins
-```bash
-hyprpm update --no-shallow
-hyprpm add https://github.com/alexhulbert/Hyprchroma
-hyprpm enable hyprchroma
 ```
 Copy all the config files in your home directory
 ```bash
