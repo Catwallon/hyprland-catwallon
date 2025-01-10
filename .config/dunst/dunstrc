@@ -2,7 +2,7 @@
     origin = top-right
     width = (75, 250)
     height = 100
-    offset = 40x40
+    offset = 14x15
     font = SFMono Nerd Font
     format = "<b>%s</b>\n%b\n"
 	enable_recursive_icon_lookup = true
